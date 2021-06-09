@@ -24,7 +24,7 @@ from pyrogram import Client, filters
 
 
 
-HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\nIam MusicPlayer 2.0 which plays music in Channels and Groups 24*7\n\nI can even Stream Youtube Live in Your Voicechat\n\nDeploy Your Own bot from source code below\n\nHit /help to know about available commands.</b>"
+HOME_TEXT = "<b> വഴി തെറ്റി വന്നതാണോ [{}](tg://user?id={})</b>"
 HELP = """
 
 <b>Add the bot and User account in your Group with admin rights.
@@ -66,13 +66,13 @@ You can also use /dplay <song name> to play a song from Deezer.</b>
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-        InlineKeyboardButton('🤖 Other Bots', url='https://t.me/subin_works/122'),
+        InlineKeyboardButton('Channel', url='https://t.me/pdfmalayalam'),
+        InlineKeyboardButton('Group', url='https://t.me/onlinestorylovers'),
     ],
-    [
-        InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/subinps'),
-        InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
-    ],
+   # [
+     #   InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/subinps'),
+      #  InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+  #  ],
     [
         InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
         
@@ -87,12 +87,12 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/subin_works'),
-            InlineKeyboardButton('🤖 Other Bots', url='https://t.me/subin_works/122'),
-        ],
-        [
-            InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/subinps'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
+            InlineKeyboardButton('⚙️  Channel', url='https://t.me/pdfmalayalam'),
+          #  InlineKeyboardButton('🤖 Other Bots', url='https://t.me/subin_works/122'),
+      #  ],
+     #   [
+        #    InlineKeyboardButton('👨🏼‍💻 Developer', url='https://t.me/subinps'),
+         #   InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/MusicPlayer'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
